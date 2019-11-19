@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "test_name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "product",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quater",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "week",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20191119092319",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "tester_setup",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

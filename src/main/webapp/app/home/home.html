@@ -1,6 +1,34 @@
  <div ng-cloak>
     <div class="row">
         <div class="col-md-4">
+           <!--  <span class="hipster img-responsive img-rounded"></span> -->
+        </div>
+        <div class="col-md-8">
+          
+
+            <div ng-switch="vm.isAuthenticated()">
+                <div class="alert alert-success" ng-switch-when="true">
+                    You are logged in as user "{{vm.account.login}}".
+                </div>
+
+            </div>
+
+         
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--  
+ 
+ 
+ 
+ 
+ <div ng-cloak>
+    <div class="row">
+        <div class="col-md-4">
             <span class="hipster img-responsive img-rounded"></span>
         </div>
         <div class="col-md-8">
@@ -39,3 +67,4 @@
         </div>
     </div>
 </div>
+ -->

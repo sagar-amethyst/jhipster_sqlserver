@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Tester Setup</span> {{vm.tester_setup.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Test Name</span></dt>
+        <dd>
+            <span>{{vm.tester_setup.test_name}}</span>
+        </dd>
+        <dt><span>Product</span></dt>
+        <dd>
+            <span>{{vm.tester_setup.product}}</span>
+        </dd>
+        <dt><span>Quater</span></dt>
+        <dd>
+            <span>{{vm.tester_setup.quater}}</span>
+        </dd>
+        <dt><span>Week</span></dt>
+        <dd>
+            <span>{{vm.tester_setup.week}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.tester_setup.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tester-setup-detail.edit({id:vm.tester_setup.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

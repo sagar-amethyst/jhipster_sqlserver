@@ -1,0 +1,68 @@
+<div>
+    <h2>Tester Setups</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tester-setup.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Tester Setup
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="test_name"><span>Test Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="product"><span>Product</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="quater"><span>Quater</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="week"><span>Week</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tester_setup in vm.tester_setups track by tester_setup.id">
+                    <td><a ui-sref="tester-setup-detail({id:tester_setup.id})">{{tester_setup.id}}</a></td>
+                    <td>{{tester_setup.test_name}}</td>
+                    <td>{{tester_setup.product}}</td>
+                    <td>{{tester_setup.quater}}</td>
+                    <td>{{tester_setup.week}}</td>
+                    <td>{{tester_setup.status}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tester-setup-detail({id:tester_setup.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tester-setup.edit({id:tester_setup.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tester-setup.delete({id:tester_setup.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>
