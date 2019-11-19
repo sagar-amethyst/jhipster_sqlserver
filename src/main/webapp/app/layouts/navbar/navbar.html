@@ -8,8 +8,10 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
-                <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
-                <span>Mssjapp</span> <span class="navbar-version">v{{VERSION}}</span>
+<!--                 <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
+ -->           
+  <img class="logo-img" src="content/images/BI.JPG" alt="logo"/>     
+             <!--    <span>Mssjapp</span> <span class="navbar-version">v{{VERSION}}</span> -->
             </a>
         </div>
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
@@ -32,6 +34,18 @@
                         </span>
                     </a>
                     <ul class="dropdown-menu" uib-dropdown-menu>
+                        <li ui-sref-active="active">
+                                <a ui-sref="task" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span>Task</span>
+                                </a>
+                            </li>
+                        <li ui-sref-active="active">
+                                <a ui-sref="tester-setup" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span>Tester Setup</span>
+                                </a>
+                            </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                 </li>

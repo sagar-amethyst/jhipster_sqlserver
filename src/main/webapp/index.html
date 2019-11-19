@@ -27,13 +27,13 @@
     <page-ribbon></page-ribbon>
     <div ui-view="navbar" ng-cloak></div>
     <div class="container">
-        <div class="well" ui-view="content">
-            <!-- Angular views -->
-        </div>
+       <!--  <div class="well" ui-view="content">
+            Angular views
+        </div> -->
 
-        <div class="footer" ng-cloak>
+        <!-- <div class="footer" ng-cloak>
             <p data-translate="footer">This is your footer</p>
-        </div>
+        </div> -->
     </div>
     <noscript>
         <h1>You must enable javascript to view this page.</h1>
@@ -100,6 +100,18 @@
     <script src="app/layouts/error/error.state.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
+    <script src="app/entities/tester-setup/tester-setup-dialog.controller.js"></script>
+    <script src="app/entities/tester-setup/tester-setup-detail.controller.js"></script>
+    <script src="app/entities/tester-setup/tester-setup-delete-dialog.controller.js"></script>
+    <script src="app/entities/tester-setup/tester-setup.state.js"></script>
+    <script src="app/entities/tester-setup/tester-setup.service.js"></script>
+    <script src="app/entities/tester-setup/tester-setup.controller.js"></script>
+    <script src="app/entities/task/task-dialog.controller.js"></script>
+    <script src="app/entities/task/task-detail.controller.js"></script>
+    <script src="app/entities/task/task-delete-dialog.controller.js"></script>
+    <script src="app/entities/task/task.state.js"></script>
+    <script src="app/entities/task/task.service.js"></script>
+    <script src="app/entities/task/task.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
